@@ -4,10 +4,7 @@
     --light-blue: #3882F6;
     --main-text: #F9FAF8;
     --secondary-text: #E5E7EB;
-    --dark-text: #1F2937;
   }
-
-
 
 body {
     font-family: Roboto;
@@ -51,12 +48,14 @@ body {
     padding-inline: 256px;
 }
 
-.annotation-button {
+.annotation-button, .cta-button {
     background-color: var(--light-blue);
     color: var(--secondary-text);
     border: 0;
     padding: 8px 24px;
     border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .annotation-headline {
@@ -65,10 +64,11 @@ body {
     font-weight:900
 }
 
-.annotation-text {
+.annotation-text, .cta-text, .footer {
     font-size:18px;
     color:var(--secondary-text)
 }
+
 .annotation-image {
     width: 50%;
     background-color: var(--light-blue);
@@ -86,13 +86,15 @@ body {
 
 .second-container {
     display: flex;
-    padding-inline: 256px;
     padding-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
 }
 
 .second-headline {
     font-size: 36px;
-    color: var(--dark-text);
+    color: var(--dark-blue);
     font-weight: 900;
     text-align: center;
     padding-top: 48px;
@@ -101,6 +103,7 @@ body {
 
 .second-images {
     display: flex;
+    max-width: 200px;
     flex-direction: column;
     align-items: center;
 }
@@ -117,3 +120,78 @@ body {
     padding: 24px
 }
 
+.quote-section-container {
+    background-color: #E5E7EB;
+    min-height: 400px;
+    align-content: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-inline: 25%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.quote-text {
+    color: var(--dark-blue);
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.quote-name {
+    align-self: flex-end;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cta-section {
+    min-height: 320px;
+    align-content: center;
+}
+
+.cta-table {
+    background-color: var(--light-blue);
+    width: 55%;
+    padding: 50px 100px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cta-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-right {
+    align-content: center;
+}
+.cta-button {
+    align-self: flex-end;
+    align-items: center;
+}
+
+.cta-headline {
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--main-text);
+    padding-bottom: 8px;
+}
+
+.cta-button {
+    border: 2px solid var(--main-text)
+}
+
+.footer {
+    text-align: center;
+    padding: 32px;
+}
